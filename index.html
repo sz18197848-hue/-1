@@ -4,55 +4,79 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Support</title>
+
   <style>
     body {
       margin: 0;
       font-family: system-ui, -apple-system, BlinkMacSystemFont;
-      background: #ffffff;
+      background: #f6f7f9;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
+      min-height: 100vh;
     }
+
     .box {
       width: 100%;
-      max-width: 360px;
-      padding: 20px;
+      max-width: 380px;
+      padding: 24px;
+      background: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
       text-align: center;
     }
+
     h1 {
-      font-size: 20px;
-      margin-bottom: 20px;
+      font-size: 22px;
+      margin-bottom: 24px;
     }
-    a {
+
+    .btn {
       display: block;
-      padding: 14px 0;
-      margin-bottom: 12px;
+      padding: 15px 0;
+      margin-bottom: 14px;
       text-decoration: none;
-      background: #111;
-      color: #fff;
-      border-radius: 8px;
-      font-size: 15px;
+      color: #ffffff;
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    .a { background: #007aff; }   /* Primary - 蓝色 */
+    .b { background: #34c759; }   /* Online - 绿色 */
+    .c { background: #ff9500; }   /* Backup - 橙色 */
+
+    .btn:active {
+      transform: scale(0.98);
+    }
+
+    .tip {
+      margin-top: 10px;
+      font-size: 13px;
+      color: #888888;
     }
   </style>
 </head>
-<body>
 
+<body>
   <div class="box">
     <h1>Contact Support</h1>
 
-    <a href="https://t.me/JCWL668 " target="_blank">
-      Contact customer service A
+    <a class="btn a" href="https://t.me/JCWL668" target="_blank">
+      Primary Support
     </a >
 
-    <a href="https://t.me/JCWL668" target="_blank">
-      Contact customer service B
+    <a class="btn b" href="https://t.me/JCWL668" target="_blank">
+      Online Support
     </a >
 
-    <a href="https://t.me/JCWL668" target="_blank">
-      Contact customer service C
+    <a class="btn c" href="https://t.me/JCWL668" target="_blank">
+      Backup Support
     </a >
+
+    <div class="tip">
+      Online support · 24/7 response
+    </div>
   </div>
-
 </body>
 </html>
