@@ -30,15 +30,23 @@
       text-align: center;
     }
 
+    /* 顶部圆形机器人图标 */
     .logo {
       width: 56px;
       height: 56px;
       margin: 0 auto 14px;
       border-radius: 50%;
-      background: linear-gradient(135deg, #007aff, #4da3ff);
+      background: #0a2a66;
       display: flex;
       align-items: center;
       justify-content: center;
+      overflow: hidden;
+    }
+
+    .logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
     h1 {
@@ -53,19 +61,20 @@
       margin-bottom: 22px;
     }
 
+    /* 聊天按钮 */
     .btn {
       display: flex;
       align-items: center;
-      justify-content: center;
-      gap: 10px;
-      padding: 15px;
+      justify-content: flex-start;
+      gap: 12px;
+      padding: 15px 16px;
       margin-bottom: 14px;
       border-radius: 12px;
       text-decoration: none;
       font-size: 16px;
       font-weight: 500;
       color: #fff;
-      background: linear-gradient(135deg, #007aff, #4da3ff);
+      background: linear-gradient(135deg, #0a2a66, #0f4fd8);
       transition: transform 0.15s ease, box-shadow 0.15s ease;
     }
 
@@ -78,8 +87,16 @@
       transform: scale(0.98);
     }
 
+    /* 聊天框图标对齐 */
     .icon {
+      width: 22px;
+      height: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
       font-size: 18px;
+      line-height: 1;
     }
 
     .status {
@@ -115,30 +132,10 @@
 
 <body>
   <div class="card">
-    <!-- 圆形蓝色机器人客服图标 -->
+
+    <!-- 顶部：最新机器人图片 -->
     <div class="logo">
-      <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">
-        <path
-          fill="#ffffff"
-          d="
-            M12 2
-            a1 1 0 0 1 1 1v1h3
-            a3 3 0 0 1 3 3v6
-            a3 3 0 0 1-3 3h-1v2
-            a1 1 0 1 1-2 0v-2h-2v2
-            a1 1 0 1 1-2 0v-2H8
-            a3 3 0 0 1-3-3V7
-            a3 3 0 0 1 3-3h3V3
-            a1 1 0 0 1 1-1
-            zm-4 7
-            a1.2 1.2 0 1 0 0 2.4
-            a1.2 1.2 0 0 0 0-2.4
-            zm8 0
-            a1.2 1.2 0 1 0 0 2.4
-            a1.2 1.2 0 0 0 0-2.4
-          "
-        />
-      </svg>
+      < img src="65EC07E7-90F3-4419-8B71-F5FF953F19C8.jpeg" alt="Customer Service Bot">
     </div>
 
     <h1>Contact Support</h1>
@@ -167,6 +164,7 @@
     <div class="tip">
       Please contact us through official channels only
     </div>
+
   </div>
 </body>
 </html>
