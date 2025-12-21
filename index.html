@@ -1,81 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact Support</title>
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont;
-      background: #f6f7f9;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: linear-gradient(135deg, #eef2f7, #f8f9fb);
       display: flex;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
       min-height: 100vh;
     }
 
-    .box {
+    .card {
       width: 100%;
       max-width: 380px;
-      padding: 24px;
+      padding: 28px 24px 26px;
       background: #ffffff;
-      border-radius: 16px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      border-radius: 18px;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
       text-align: center;
+    }
+
+    .logo {
+      width: 56px;
+      height: 56px;
+      margin: 0 auto 14px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #007aff, #4da3ff);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 26px;
+      font-weight: 600;
     }
 
     h1 {
       font-size: 22px;
-      margin-bottom: 24px;
+      margin: 10px 0 6px;
+      color: #111;
+    }
+
+    .subtitle {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 22px;
     }
 
     .btn {
-      display: block;
-      padding: 15px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 15px;
       margin-bottom: 14px;
+      border-radius: 12px;
       text-decoration: none;
-      color: #ffffff;
-      border-radius: 10px;
       font-size: 16px;
       font-weight: 500;
+      color: #fff;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
     }
 
-    .a { background: #007aff; }   /* Primary - 蓝色 */
-    .b { background: #34c759; }   /* Online - 绿色 */
-    .c { background: #ff9500; }   /* Backup - 橙色 */
+    .btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    }
 
     .btn:active {
       transform: scale(0.98);
     }
 
+    .primary {
+      background: linear-gradient(135deg, #007aff, #4da3ff);
+    }
+
+    .online {
+      background: linear-gradient(135deg, #34c759, #6ee78b);
+    }
+
+    .backup {
+      background: linear-gradient(135deg, #ff9500, #ffb347);
+    }
+
+    .icon {
+      font-size: 18px;
+    }
+
     .tip {
-      margin-top: 10px;
+      margin-top: 18px;
       font-size: 13px;
-      color: #888888;
+      color: #888;
+    }
+
+    .status {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 6px;
+      font-size: 12px;
+      color: #34c759;
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      background: #34c759;
+      border-radius: 50%;
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+      0% { opacity: 0.3; }
+      50% { opacity: 1; }
+      100% { opacity: 0.3; }
     }
   </style>
 </head>
 
 <body>
-  <div class="box">
-    <h1>Contact Support</h1>
+  <div class="card">
+    <div class="logo">CS</div>
 
-    <a class="btn a" href="https://t.me/JCWL668" target="_blank">
+    <h1>Contact Support</h1>
+    <div class="subtitle">Official customer service channel</div>
+
+    <a class="btn primary" href="https://t.me/JCWL668" target="_blank">
+      <span class="icon">💬</span>
       Primary Support
     </a >
 
-    <a class="btn b" href="https://t.me/JCWL668" target="_blank">
+    <a class="btn online" href="https://t.me/JCWL668" target="_blank">
+      <span class="icon">🟢</span>
       Online Support
     </a >
 
-    <a class="btn c" href="https://t.me/JCWL668" target="_blank">
+    <a class="btn backup" href="https://t.me/JCWL668" target="_blank">
+      <span class="icon">🔁</span>
       Backup Support
     </a >
 
+    <div class="status">
+      <div class="dot"></div>
+      Online · 24/7 Response
+    </div>
+
     <div class="tip">
-      Online support · 24/7 response
+      Please contact us through official channels only
     </div>
   </div>
 </body>
