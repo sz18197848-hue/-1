@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact Support</title>
+  <title>Apple-Style Support</title>
 
   <style>
     * {
@@ -12,85 +12,109 @@
 
     body {
       margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background: linear-gradient(135deg, #eef2f7, #f8f9fb);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", system-ui;
+      background: #f5f5f7;
+      color: #1d1d1f;
     }
 
-    .card {
-      width: 100%;
-      max-width: 380px;
-      padding: 28px 24px 26px;
-      background: #ffffff;
-      border-radius: 18px;
-      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+    .page {
+      max-width: 420px;
+      margin: 0 auto;
+      padding: 40px 20px 32px;
+    }
+
+    /* ===== Hero ===== */
+    .hero {
       text-align: center;
+      margin-bottom: 36px;
     }
 
-    .logo {
-      width: 56px;
-      height: 56px;
-      margin: 0 auto 14px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, #007aff, #4da3ff);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #fff;
-      font-size: 26px;
+    .hero h1 {
+      font-size: 28px;
       font-weight: 600;
+      letter-spacing: -0.4px;
+      margin-bottom: 8px;
     }
 
-    h1 {
-      font-size: 22px;
-      margin: 10px 0 6px;
-      color: #111;
+    .hero p {
+      font-size: 16px;
+      color: #6e6e73;
+      line-height: 1.5;
     }
 
-    .subtitle {
-      font-size: 14px;
-      color: #666;
-      margin-bottom: 22px;
+    /* ===== Card Group ===== */
+    .card-group {
+      background: #ffffff;
+      border-radius: 20px;
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
     }
 
-    .btn {
+    .support-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 18px 20px;
+      text-decoration: none;
+      color: inherit;
+      border-bottom: 1px solid #f0f0f2;
+      transition: background 0.15s ease;
+    }
+
+    .support-item:last-child {
+      border-bottom: none;
+    }
+
+    .support-item:hover {
+      background: #f5f5f7;
+    }
+
+    .icon-wrap {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #0a3cff, #0f5bff);
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 10px;
-      padding: 15px;
-      margin-bottom: 14px;
-      border-radius: 12px;
-      text-decoration: none;
+      flex-shrink: 0;
+    }
+
+    .icon-wrap svg {
+      width: 20px;
+      height: 20px;
+      fill: #ffffff;
+    }
+
+    .text {
+      flex: 1;
+    }
+
+    .text strong {
+      display: block;
       font-size: 16px;
       font-weight: 500;
-      color: #fff;
-      background: linear-gradient(135deg, #007aff, #4da3ff);
-      transition: transform 0.15s ease, box-shadow 0.15s ease;
+      margin-bottom: 2px;
     }
 
-    .btn:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    .text span {
+      font-size: 13px;
+      color: #6e6e73;
     }
 
-    .btn:active {
-      transform: scale(0.98);
-    }
-
-    .icon {
+    .arrow {
       font-size: 18px;
+      color: #c7c7cc;
     }
 
+    /* ===== Status ===== */
     .status {
-      display: inline-flex;
+      display: flex;
       align-items: center;
+      justify-content: center;
       gap: 6px;
-      margin-top: 10px;
-      font-size: 12px;
+      margin: 18px 0 8px;
+      font-size: 13px;
       color: #34c759;
     }
 
@@ -108,44 +132,82 @@
       100% { opacity: 0.3; }
     }
 
-    .tip {
-      margin-top: 16px;
-      font-size: 13px;
-      color: #888;
+    /* ===== Footer ===== */
+    .footer {
+      text-align: center;
+      font-size: 12px;
+      color: #86868b;
+      margin-top: 24px;
     }
   </style>
 </head>
 
 <body>
-  <div class="card">
-    <div class="logo">CS</div>
+  <div class="page">
 
-    <h1>Contact Support</h1>
-    <div class="subtitle">Official customer service channel</div>
+    <!-- Hero -->
+    <div class="hero">
+      <h1>Support</h1>
+      <p>
+        Get help from our official customer service team.
+      </p >
+    </div>
 
-    <a class="btn" href="https://t.me/JCWL668" target="_blank">
-      <span class="icon">💬</span>
-      Primary Support
-    </a >
+    <!-- Support Cards -->
+    <div class="card-group">
 
-    <a class="btn" href="https://t.me/JCWL668" target="_blank">
-      <span class="icon">💬</span>
-      Online Support
-    </a >
+      <a class="support-item" href="https://t.me/JCWL668" target="_blank">
+        <div class="icon-wrap">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 3C6.48 3 2 6.94 2 11.8c0 2.52 1.28 4.77 3.34 6.32L4.5 22l4.11-2.28c1.08.3 2.22.46 3.39.46 5.52 0 10-3.94 10-8.8S17.52 3 12 3z"/>
+          </svg>
+        </div>
+        <div class="text">
+          <strong>Primary Support</strong>
+          <span>Chat with our main service team</span>
+        </div>
+        <div class="arrow">›</div>
+      </a >
 
-    <a class="btn" href="https://t.me/JCWL668" target="_blank">
-      <span class="icon">💬</span>
-      Backup Support
-    </a >
+      <a class="support-item" href="https://t.me/JCWL668" target="_blank">
+        <div class="icon-wrap">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 3C6.48 3 2 6.94 2 11.8c0 2.52 1.28 4.77 3.34 6.32L4.5 22l4.11-2.28c1.08.3 2.22.46 3.39.46 5.52 0 10-3.94 10-8.8S17.52 3 12 3z"/>
+          </svg>
+        </div>
+        <div class="text">
+          <strong>Online Support</strong>
+          <span>Available 24 hours a day</span>
+        </div>
+        <div class="arrow">›</div>
+      </a >
 
+      <a class="support-item" href="https://t.me/JCWL668" target="_blank">
+        <div class="icon-wrap">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 3C6.48 3 2 6.94 2 11.8c0 2.52 1.28 4.77 3.34 6.32L4.5 22l4.11-2.28c1.08.3 2.22.46 3.39.46 5.52 0 10-3.94 10-8.8S17.52 3 12 3z"/>
+          </svg>
+        </div>
+        <div class="text">
+          <strong>Backup Support</strong>
+          <span>Alternative service channel</span>
+        </div>
+        <div class="arrow">›</div>
+      </a >
+
+    </div>
+
+    <!-- Status -->
     <div class="status">
       <div class="dot"></div>
       Online · 24/7 Response
     </div>
 
-    <div class="tip">
+    <!-- Footer -->
+    <div class="footer">
       Please contact us through official channels only
     </div>
+
   </div>
 </body>
 </html>
