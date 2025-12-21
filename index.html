@@ -30,7 +30,7 @@
       text-align: center;
     }
 
-    /* 顶部圆形机器人图标 */
+    /* 顶部圆形客服消息图标 */
     .logo {
       width: 56px;
       height: 56px;
@@ -40,13 +40,12 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      overflow: hidden;
     }
 
-    .logo img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+    .logo svg {
+      width: 28px;
+      height: 28px;
+      fill: #ffffff;
     }
 
     h1 {
@@ -65,7 +64,6 @@
     .btn {
       display: flex;
       align-items: center;
-      justify-content: flex-start;
       gap: 12px;
       padding: 15px 16px;
       margin-bottom: 14px;
@@ -89,8 +87,8 @@
 
     /* 聊天框图标对齐 */
     .icon {
-      width: 22px;
-      height: 22px;
+      width: 24px;
+      height: 24px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -133,9 +131,11 @@
 <body>
   <div class="card">
 
-    <!-- 顶部：最新机器人图片 -->
+    <!-- 顶部：客服消息图标 -->
     <div class="logo">
-      < img src="65EC07E7-90F3-4419-8B71-F5FF953F19C8.jpeg" alt="Customer Service Bot">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M4 3h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H9l-5 4v-4H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"/>
+      </svg>
     </div>
 
     <h1>Contact Support</h1>
